@@ -26,10 +26,3 @@ var swiper = new Swiper('.swiper-container', {
       }
   });
 
-// const mainWrapper = document.querySelector('.main-wrapper')
-// const mainWrapperWidth = mainWrapper.getBoundingClientRect().width
-// const bodyWidth = document.body.getBoundingClientRect().width
-// 
-// mainWrapper.style.marginLeft = `${(bodyWidth - mainWrapperWidth)/2}px`
-// mainWrapper.style.marginLeft = `${(bodyWidth - mainWrapperWidth)/2}px`
-

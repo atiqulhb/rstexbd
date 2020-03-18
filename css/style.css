@@ -1,7 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Bellota+Text:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap");
 html {
   box-sizing: border-box; }
@@ -59,7 +55,6 @@ body {
         width: 100%;
         object-fit: contain; }
     body .main-wrapper #products {
-      display: none;
       width: 100%; }
       body .main-wrapper #products h2 {
         text-align: center; }
@@ -93,7 +88,8 @@ body {
               margin-bottom: 15px; }
     body .main-wrapper .company {
       width: 100%;
-      margin: 25px 0; }
+      margin: 25px 0;
+      margin-bottom: 30px; }
       body .main-wrapper .company h2 {
         text-align: center;
         font-weight: 300; }
@@ -107,7 +103,10 @@ body {
       body .main-wrapper .company .company-details {
         width: 50%;
         float: right; }
+        body .main-wrapper .company .company-details p {
+          margin-left: 25px; }
       body .main-wrapper .company .workspace {
+        margin-top: 30px;
         width: 80%;
         font-weight: 300;
         margin: 0 10%;
@@ -144,7 +143,6 @@ body {
         height: 100%;
         object-fit: contain; }
     body .main-wrapper .news {
-      display: none;
       margin: 25px 0;
       width: 100%; }
       body .main-wrapper .news .news-left {
