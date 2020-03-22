@@ -16,42 +16,58 @@ h2 {
 .partners {
   grid-area: partners; }
 
+.mobileNavShown {
+  left: calc(100% - 350px) !important; }
+
 body {
   margin: 0;
+  position: relative;
+  overflow-x: hidden;
   font-family: 'poppins', sans-serif;
   font-weight: 300; }
   body .main-wrapper {
+    position: absolute;
     width: 80%;
-    margin: 0 10%; }
+    margin: 0 10%;
+    overflow: hidden; }
     body .main-wrapper header {
-      margin: 25px 0;
+      z-index: 2;
       width: 100%;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: white; }
       body .main-wrapper header .logo {
-        float: left;
-        width: 130px; }
+        grid-area: logo; }
         body .main-wrapper header .logo img {
-          width: 100%;
+          width: 130px;
           object-fit: contain; }
-      body .main-wrapper header span {
-        margin-left: 35px;
+      body .main-wrapper header .heading {
         font-size: 12px;
         text-align: center; }
-    body .main-wrapper nav {
-      width: 100%;
-      margin: 25px 0;
-      display: flex;
-      justify-content: space-around;
-      background-color: #BE1441; }
-      body .main-wrapper nav a {
-        text-decoration: none;
-        color: #fff;
-        padding: 10px 0; }
+      body .main-wrapper header .contact-info-wrapper .contact-info {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        font-size: 12px; }
+      body .main-wrapper header #menu {
+        flex: 4;
+        display: flex;
+        justify-content: flex-end; }
+      body .main-wrapper header .desktop-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: #BE1441; }
+        body .main-wrapper header .desktop-nav a {
+          text-decoration: none;
+          color: #fff;
+          padding: 10px 0; }
     body .main-wrapper .big-image {
       margin: 50px 0;
       width: 100%;
-      height: 420px; }
+      height: auto;
+      margin-top: 25px; }
       body .main-wrapper .big-image img {
         width: 100%;
         object-fit: contain; }
@@ -96,16 +112,12 @@ body {
         font-weight: 300; }
       body .main-wrapper .company .company-image {
         width: 50%;
-        float: left; }
+        float: left;
+        margin-right: 25px; }
         body .main-wrapper .company .company-image img {
           width: 100%;
           object-fit: contain;
           border-radius: 15px; }
-      body .main-wrapper .company .company-details {
-        width: 50%;
-        float: right; }
-        body .main-wrapper .company .company-details p {
-          margin-left: 25px; }
       body .main-wrapper .company .workspace {
         margin-top: 30px;
         width: 80%;
@@ -114,7 +126,6 @@ body {
         display: flex;
         flex-direction: column; }
         body .main-wrapper .company .workspace div {
-          width: 100%;
           display: flex; }
           body .main-wrapper .company .workspace div span {
             margin: 5px 0; }
@@ -143,15 +154,32 @@ body {
         width: 100%;
         height: 100%;
         object-fit: contain; }
-    body .main-wrapper .news {
-      margin: 50px 0;
-      width: 100%; }
-      body .main-wrapper .news .news-left {
-        width: 50%;
-        float: left; }
-        body .main-wrapper .news .news-left img {
-          width: 100%;
-          object-fit: contain; }
-      body .main-wrapper .news .news-right {
-        width: 50%;
-        float: right; }
+  body .mobile-nav {
+    bottom: 0;
+    z-index: 1;
+    width: 350px;
+    background-color: orange;
+    position: fixed;
+    left: 100%;
+    transition: left 0.5s ease-in-out; }
+
+@media (min-width: 1301px) {
+  #menu {
+    display: none !important; }
+  .contact-info-wrapper {
+    flex: 4; }
+  .logo {
+    flex: 1; }
+  .heading {
+    flex: 4; }
+    .heading div {
+      width: 300px;
+      margin: 0 auto; } }
+
+@media (max-width: 1300px) {
+  .contact-info {
+    display: none !important; }
+  .desktop-nav {
+    display: none !important; }
+  .heading {
+    width: 100%; } }

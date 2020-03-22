@@ -6,6 +6,10 @@ var swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
         clickable: true,
       },
+       autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -25,4 +29,26 @@ var swiper = new Swiper('.swiper-container', {
         },
       }
   });
+ 
+var header = document.querySelector('header')
+var mobileNav = document.querySelector(".mobile-nav");
 
+  
+setTimeout(function (){
+  var headerHeight = header.getBoundingClientRect().height
+  mobileNav.style.height = `calc(100vh - ${headerHeight}px)`
+  console.log(headerHeight)
+}, 3000)
+
+console.log(header.clientHeight)
+console.log(header.offsetHeight)
+
+function toggleMobileNav() {
+  if (mobileNav.className === "mobile-nav") {
+    mobileNav.className += " mobileNavShown";
+  } else {
+    mobileNav.className = "mobile-nav";
+  }
+}
+
+document.querySelector('#menu').addEventListener('click', toggleMobileNav);
